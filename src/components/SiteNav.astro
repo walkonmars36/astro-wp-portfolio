@@ -7,14 +7,12 @@ const {menu, generalSettings} = Astro.props;
 <header>
     <nav>
         <div>
-            <a href="/" class='site-name'>{generalSettings.title}</a>
+            <a href="/" class='site-name'>Mark Lawson</a>
         </div>
         <ul>
-           {menu.menuItems.nodes.map(menuItem => {
-            return (<li>
-                        <a href={menuItem.uri || '/'}>{menuItem.label}</a>
-                    </li>)
-           })}
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+          
         </ul>
     </nav>
 </header>
@@ -59,3 +57,11 @@ const {menu, generalSettings} = Astro.props;
         }
     }
 </style>
+
+<!-- {menu.menuItems.nodes.map(menuItem => {
+    return (<li>
+                <a href={menuItem.uri || '/'}>{menuItem.label}</a>
+            </li>)
+   })} -->
+
+   <!-- {generalSettings.title} -->
